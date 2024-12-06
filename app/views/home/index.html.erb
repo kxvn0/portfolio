@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <link rel="stylesheet" href="<%= asset_path 'styles.css' %>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section id="content">
+            <header>
+                <div class="intro-container">
+                    <div class="intro-text">
+                        <h1>Hello, my name is Kevin.</h1>
+                        <h2>And I am a computer science student!</h2>
+                        <p>Welcome to my professional portfolio, where I showcase my skills in web development and beyond.</p>
+                    </div>
+                    <div class="intro-image">
+                        <img src="<%= asset_path 'shadowTUX.jpg' %>" alt="A creative representation of myself">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Overview Section -->
+            <section id="overview">
+                <h2>What You Will Find Here</h2>
+                <div class="overview-cards">
+                    <div class="card">
+                        <h3>My Projects</h3>
+                        <p>Explore a collection of projects that I created over the course of my time.</p>
+                        <button onclick="window.location.href='<%= projects_path %>'">View Projects</button>
+                    </div>
+                    <div class="card">
+                        <h3>Contact Me</h3>
+                        <p>Shoot me A Message!.</p>
+                        <button onclick="window.location.href='<%= contact_path %>'">Contact Me</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section id="cta">
+                <h2>Enjoy Your Stay While it Lasts!</h2>
+                <p>Feel free to check out my projects and give me a follow!.</p>
+                <div class="social-links">
+                    <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </section>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="contact-title">Contact Me:</div>
+            <div class="contact-details">
+                <p>Email: <a href="mailto:official.kevo12@gmail.com">official.kevo12@gmail.com</a></p>
+                <p>Connect on:
+                    <a href="https://x.com/i7Kayy" target="_blank"><i class="fab fa-twitter"></i> Twitter</a> |
+                    <a href="https://www.linkedin.com/in/kevin-cosme-a06763300/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </p>
+            </div>
+        </footer>   
+    </div>
+</body>
+</html>

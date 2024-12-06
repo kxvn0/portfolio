@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="<%= asset_path 'styles.css' %>">
+</head>
+<body>
+    <div class="projects-container">
+        <section class="projects-header">
+            <h1>My Projects</h1>
+        </section>
+        <section class="projects-list">
+            <% if @projects.any? %>
+                <% @projects.each do |project| %>
+                    <div class="project-item">
+                        <h2><%= project.title %></h2>
+                        <p><%= project.description %></p>
+                        <img src="<%= asset_path project.image %>" alt="<%= project.title %>" style="width: 300px; max-width: 100%; height: auto;" onclick="openModal(this)" />
+                    </div>
+                <% end %>
+            <% else %>
+                <p>No projects found.</p>
+            <% end %>
+        </section>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        function openModal(image) {
+            var modal = document.getElementById("imageModal");
+            var modalImg = document.getElementById("modalImage");
+            var captionText = document.getElementById("caption");
+            
+            modal.style.display = "block";
+            modalImg.src = image.src;
+            captionText.innerHTML = image.alt; // Use the alt text for the caption
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+

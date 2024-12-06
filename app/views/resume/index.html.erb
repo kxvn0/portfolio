@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="<%= asset_path 'styles.css' %>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section id="content">
+            <div class="resume-container">
+                <header class="resume-header">
+                    <h1>My Resume</h1>
+                </header>
+                <section class="resume-content">
+                    <!-- Example with an iframe for an embedded PDF resume -->
+                    <iframe src="<%= asset_path 'Resume_Kevin_Cosme.pdf' %>" title="My Resume"></iframe>
+                </section>
+            </div>
+        </section>  
+    </div>
+</body>
+</html>

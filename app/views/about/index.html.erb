@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="<%= asset_path 'styles.css' %>">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="about-container">
+            <section class="about-header">
+                <h1 class="about-title">about.</h1>
+            </section>
+            <section class="about-content">
+                <div class="about-text">
+                    <h2>Who I Am</h2>
+                    <p>Hi, my name is Kevin. I am a senior at the University of Memphis and I am majoring in Computer Science.</p>
+                    <h2>What I Do</h2>
+                    <p>I am an aspiring software engineer and website developer. Currently, I am working on my portfolio website, which is this current site!</p>
+                    <h2>What I Want to Be</h2>
+                    <p>My goal is to have a career in software engineering or web development. I am passionate about coding and constantly striving to improve my skills in the field.</p>
+                    <h2>More About Me</h2>
+                    <p>I am a huge fan of soccer, which is called football. I am a huge fan of Real Madrid, which is a team in Spain! My favorite color is red. I also love watching anime! My favorite anime of all time is Naruto. I also have several hobbies that I do in my free time. Check out my hobbies <%= link_to 'here', hobbies_path %>. </p>
+                </div>
+                <div class="about-image">
+                    <img src="<%= asset_path 'shadowTUX.jpg' %>" alt="Your Picture">
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

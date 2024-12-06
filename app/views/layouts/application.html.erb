@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="<%= asset_path 'styles.css' %>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar">
+            <ul>
+                <li><%= link_to 'Home', root_path %></li>
+                <li><%= link_to 'About Me', about_path %></li>
+                <li><%= link_to 'Hobbies', hobbies_path %></li>
+                <li><%= link_to 'Resume', resume_path %></li>
+                <li><%= link_to 'Projects', projects_path %></li>
+                <li><%= link_to 'Contact', new_contact_path %></li>
+            </ul>
+        </nav>
+
+        <!-- Flash Messages -->
+        <section id="flash-messages" style="margin-top: 80px;">
+          <% flash.each do |type, message| %>
+            <div class="flash <%= "flash-#{type}" %>"><%= message %></div>
+          <% end %>
+        </section>
+
+        <section id="content">
+            <%= yield %>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const flashMessages = document.querySelectorAll('.flash');
+        flashMessages.forEach(function(flashMessage) {
+          setTimeout(function() {
+            flashMessage.style.animation = 'fadeOut 0.5s forwards';
+            flashMessage.addEventListener('animationend', () => {
+              flashMessage.remove();
+            });
+          }, 5000); // 5 seconds
+        });
+      });
+    </script>
+</body>
+</html>
+
+
+
+

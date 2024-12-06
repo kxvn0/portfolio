@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobbies</title>
+    <link rel="stylesheet" href="<%= asset_path 'styles.css' %>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <section id="content">
+            <div class="hobbies-container">
+                <header class="hobbies-header">
+                    <h1>My Hobbies</h1>
+                </header>
+                <section class="hobbies-content">
+                    <div class="hobby-item">
+                        <h2>Soccer/Football</h2>
+                        <p>I enjoy playing soccer, or football as it's really called. I can play many positions, but my main concern is having fun and helping the team win. I also watch a lot of games. My favorite team is Real Madrid, based in Spain! 
+                        The game are entertaining to watch. I just love football...</p>
+                        <img src="<%= asset_path 'real_madrid.jpg.png' %>" alt="Playing soccer">
+                    </div>
+                    
+                    <div class="hobby-item">
+                        <h2>Anime</h2>
+                        <p>I am a huge fan of anime. My favorite ever anime is Naruto, as it is the main anime I grew up watching. There are plenty of others that I could list. It is really fun to watch.</p>
+                        <img src="<%= asset_path 'watching_anime.jpg' %>" alt="Watching anime">
+                    </div>
+                    
+                    <div class="hobby-item">
+                        <h2>Gaming</h2>
+                        <p>I am a huge gamer as well. This is what I do in most of my free time. I play a lot of games from a variety of genres. For example, I am playing Dragon Ball: Sparking Zero! Other times I play games like Call of Duty or FIFA. I also have a whole list of my favorite games to play, but you get the picture.</p>
+                        <img src="<%= asset_path 'gaming_hobby.jpg' %>" alt="Playing games">
+                    </div>
+                </section>
+            </div>
+        </section>   
+    </div>
+</body>
+</html>
